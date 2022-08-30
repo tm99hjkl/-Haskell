@@ -1,4 +1,10 @@
+module Main(main) where
+
 import Control.Concurrent
+
+
+main :: IO ()
+main = life1 glider
 
 ---------------------------
 -- ライフゲームの実行部分 --
@@ -120,12 +126,12 @@ neighbs (x, y) =
   map
     wrap
     [ (x - 1, y - 1),
-      (x, y - 1),
+      (x    , y - 1),
       (x + 1, y - 1),
-      (x - 1, y),
-      (x + 1, y),
+      (x - 1, y    ),
+      (x + 1, y    ),
       (x - 1, y + 1),
-      (x, y + 1),
+      (x    , y + 1),
       (x + 1, y + 1)
     ]
   where

@@ -27,7 +27,7 @@ parse (P p) inp = p inp
 --  Functor, Applicativeのインスタンス定義も必要           --
 ------------------------------------------------------------
 
--- Parserをnewtype宣言で定義してMonadのインスタンスとする   --
+-- Parserをnewtype宣言で定義してMonadのインスタンスとする
 newtype Parser a = P (String -> [(a, String)])
 
 -- Sequencing parsers
